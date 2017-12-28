@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+
+#logo-wrap{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    zoom: 1;
+    .logo{
+        padding: 10px 0;
+        width: 1000px;
+        margin: 0 auto;
+        float: none;
+        a{
+            color: #333333;
+            img{height: 60px;
+                border: none;
+                font-size: 0;
+                vertical-align: top;
+            }
+        }
+     
+    }
+    .content{
+        width: 1000px;
+        margin: 20px auto;
+        
+        h2{
+            font-weight:600;
+            color: #000000;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .money{
+            width: 1000px;
+            margin: 0 auto;
+            border: 1px solid #CECECE;      
+            .top{
+                height: 35px;
+                background: #eff2f5;
+                border-bottom: 1px solid #CECECE ;
+                div{
+                    float: left;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 35px;
+                }
+                .cbx{
+                    position: relative;
+                    width: 100px;
+                    .ipt{
+                        border: none;
+                        position: absolute;
+                        top: 8px;
+                        left:5px;
+                    }
+                }
+                .name{
+                    width: 521px;
+                }
+                .price{
+                    width: 130px;
+                }
+                .number{
+                    width: 136px;
+                }
+                .action{
+                    width: 99px;
+                }
+            }
+            .center{
+                padding: 40px 0;
+                overflow: hidden;
+                height: auto;
+                background: #FDFDF7;
+                border-bottom: 1px solid #CECECE ;
+                div{
+                    float: left;
+                    padding-left: 34px;
+                    text-align: center;
+                    line-height: 35px;
+                }
+                .cbx{
+                    position: relative;
+                    width: 100px;
+                    .ipt{
+                        border: none;
+                        position: absolute;
+                        top: 60px;
+                        left:5px;
+                    }
+                   
+                }
+                .name{
+                    width: 521px;
+                     img{display: block;
+                        border: none;
+                        width: 80px;
+                        height:80px;
+                        float: left;
+                    }
+                    span{width: 300px;
+                        display: block;
+                        float: left;
+                    }
+                }
+                .price{color: red;
+                    width: 130px;
+                }
+                .number{
+                    width: 136px;
+                    .cnum{
+                        li{
+                            float: left;
+                            width: 30px;
+                            height: 30px;
+                            margin-left: 10px;
+                            border: 1px solid #EDEDED;
+                            text-align: center;
+                            line-height: 30px;
+                            font-size: 16px;
+                            cursor: pointer;
+                                input{
+                                    border: none;
+                                    width: 30px;
+                                    height: 26px;
+                                    text-align: center;
+                                    }
+                        }
+                        li:hover{color: red;}
+                        .add,.minus{cursor: pointer; font-size: 16px;}
+                        .add:hover,.minus:hover{color: red;}
+                    }
+                    
+                }
+                .action{
+                    width: 30px;
+                    cursor: pointer;
+                }
+                .action:hover{color: red; text-decoration: underline;}
+                
+            }
+            .foot{
+                   
+                    width: 100%;
+                    height: 5px;
+                    height: 35px;
+                    overflow: hidden;
+                    position: relative;
+                    input{
+                        display: block;
+                        float: right;
+                        position: absolute;
+                        right: 10px;
+                        top: 5px;
+                    }
+                    .totalprice{
+                        color: red;
+                         margin-top: 8px;
+                         float: right;
+                         margin-right: 300px;
+                     }
+                }
+    }
+    
+}
+}

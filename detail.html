@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<div id="top-wrap">
+			<div class="top">
+				<span class="top-s">您好，欢迎来到
+					<em>中酒网！</em>
+					<a href="ChinaLiquor.html">去首页</a>
+				</span>
+
+				<ul class="login-regin">
+					<li>
+						<a href="login.html">请登录</a>
+					</li>
+					<li>
+						<a href="Registered.html">免费注册</a>
+					</li>
+				</ul>
+
+				<ul class="quick">
+					<li class="sitemap-dropdown">
+						<a href="">我的中酒网<b></b></a>
+						<ol>
+							<li>
+								<a href="">已买到的商品</a>
+							</li>
+							<li>
+								<a href="">我关注的商品</a>
+							</li>
+							<li>
+								<a href="">已买到的店铺</a>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<a href="cart.html" target="_blank">购物车<em class="emnumber">0</em>件</a>
+					</li>
+
+					<li class="wx-dropdown">
+						<a href="javascript:void(0)">微信端</a>
+						<img src="img/qrCode.png" />
+					</li>
+
+					<li class="app-dropdown">
+						<a href="">APP</a>
+						<div class="dropdown-menu">
+							<img src="img/mob.png" />
+							<h3>扫描二维码</h3>
+							<p>下载手机客户端</p>
+						</div>
+					</li>
+
+					<li class="sitemap-dropdown">
+						<a href="">卖家中心<b></b></a>
+						<ol>
+							<li>
+								<a href="">商品入住</a>
+							</li>
+							<li>
+								<a href="">已卖出的商品</a>
+							</li>
+							<li>
+								<a href="">管理店铺</a>
+							</li>
+						</ol>
+					</li>
+
+					<li class="daohang-dropdown">
+						<a href="">网站导航<b></b></a>
+						<div class="dropdown-daoh">
+							<ul>
+								<script id="daoh" type="text/html">
+									{{each smallnav as item}}
+									<li>
+										<h3>{{item.title}}</h3>
+										<div class="dropdown-daoh-listcont">
+											{{each item.list as value}}
+											<a href={{value.link}} target="_blank">{{value.con}}</a>
+											{{/each}}
+										</div>
+									</li>
+									{{/each}}
+								</script>
+							</ul>
+
+						</div>
+					</li>
+
+					<li>
+						<a href="">订购热线：400-798-9999</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div class="dt_ban">
+			<a href="http://pro.zhongjiu.cn/20160606/qkj.html" target="_blank"></a>
+		</div>
+
+		<div id="hea-wrap">
+			<div class="header">
+				<div class="logo">
+					<a href=""><img src="img/logo.png" /></a>
+				</div>
+
+				<div class="gif">
+					<a href="http://pro.zhongjiu.cn/20141209/shouji/shouji.html" target="_blank">
+						<img src="http://img5.zhongjiu.cn/pro/dt/gif.gif" />
+					</a>
+				</div>
+
+				<div class="search">
+					<div class="search-form">
+						<label for="">商品</label>
+						<input type="text" class="ipt" placeholder="西凤" />
+						<ul class="iptinformation"></ul>
+						<input type="button" value="搜索" class="btn" />
+					</div>
+
+					<div class="hot-search">
+						<a href="http://www.zhongjiu.cn/search.htm?keywords=西凤" style="color: #e3393c;">西凤</a>
+						<a href="http://www.zhongjiu.cn/search.htm?keywords=青稞酒">青稞酒</a>
+						<a href="http://www.zhongjiu.cn/search.htm?keywords=洋河">洋河</a>
+						<a href="http://www.zhongjiu.cn/search.htm?keywords=习酒">习酒</a>
+						<a href="http://www.zhongjiu.cn/search.htm?keywords=小糊涂仙">小糊涂仙</a>
+						<a href="http://www.zhongjiu.cn/search.htm?keywords=酒鬼酒">酒鬼酒</a>
+						<a href="http://www.zhongjiu.cn/search.htm?keywords=张裕">张裕</a>
+						<a href="http://www.zhongjiu.cn/search.htm?keywords=拉菲">拉菲</a>
+						<a href="http://www.zhongjiu.cn/search.htm?keywords=董酒">董酒</a>
+						<a href="http://www.zhongjiu.cn/search.htm?keywords=华夏长城">华夏长城</a>
+					</div>
+				</div>
+
+				<div class="top-head-ad">
+					<a href="http://www.zhongjiu.cn/RegisterActivity/Gift">
+						<img src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201610211352319102520.png" alt="" />
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="nav-wrap">
+
+			<div class="nav">
+				<div class="categorys">
+					<div class="cate-all">
+						<a href="list.html" target="_blank">全部商品分类</a>
+					</div>
+
+					<div class="mc">
+						<div class="item" id="item1">
+							<span>
+								<script id="nav1" type="text/html">
+									{{each tita as value}}
+									<h3><i></i><a href={{value.link}}>{{value.con}}</a></h3>							
+									<p>
+										{{each value.list as lc}}
+										<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+										{{/each}}
+									</p>
+									{{/each}}
+								</script>								
+							</span>
+
+							<div class="category-details">
+								<div class="subitem" id="sub1">
+									<script id="nav-list1" type="text/html">
+										<dl class="first" style="z-index: 99;">
+											{{each navlist as value }}
+											<dt>{{value.title}}</dt>
+											<dd class="clearfix">
+												<ul>
+													{{each value.list as lc}}
+													<li>
+														<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+													</li>
+													{{/each}}
+												</ul>
+											</dd>
+											{{/each}}
+										</dl>
+									</script>
+								</div>
+
+								<div class="cate-right" id="tj1">
+									<script id="tui1" type="text/html">
+										{{each tuijian as value}}
+										<h5>{{value.title}}</h5>
+										<ul>
+											<li>
+												<a href={{value.link}}><img src={{value.src}} class="lazyload" alt="天佑德青稞酒" /> </a>
+											</li>
+										</ul>
+										{{/each}}
+									</script>
+								</div>
+							</div>
+						</div>
+
+						<div class="item" id="item2">
+							<span>
+								<script id="nav2" type="text/html">
+									{{each titb as value}}
+									<h3><i></i><a href={{value.link}}>{{value.con}}</a></h3>							
+									<p>
+										{{each value.list as lc}}
+										<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+										{{/each}}
+									</p>
+									{{/each}}
+								</script>								
+							</span>
+
+							<div class="category-details">
+								<div class="subitem" id="sub2">
+									<script id="nav-list2" type="text/html">
+										<dl class="first" style="z-index: 99;">
+											{{each navlist as value }}
+											<dt>{{value.title}}</dt>
+											<dd class="clearfix">
+												<ul>
+													{{each value.list as lc}}
+													<li>
+														<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+													</li>
+													{{/each}}
+												</ul>
+											</dd>
+											{{/each}}
+										</dl>
+									</script>
+								</div>
+
+								<div class="cate-right" id="tj2">
+									<script id="tui2" type="text/html">
+										{{each tuijian as value}}
+										<h5>{{value.title}}</h5>
+										<ul>
+											<li>
+												<a href={{value.link}}><img src={{value.src}} class="lazyload" alt="天佑德青稞酒" /> </a>
+											</li>
+										</ul>
+										{{/each}}
+									</script>
+								</div>
+							</div>
+						</div>
+
+						<div class="item" id="item3">
+							<span>
+								<script id="nav3" type="text/html">
+									{{each titc as value}}
+									<h3><i></i><a href={{value.link}}>{{value.con}}</a></h3>							
+									<p>
+										{{each value.list as lc}}
+										<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+										{{/each}}
+									</p>
+									{{/each}}
+								</script>								
+							</span>
+
+							<div class="category-details">
+								<div class="subitem" id="sub3">
+									<script id="nav-list3" type="text/html">
+										<dl class="first" style="z-index: 99;">
+											{{each navlist as value }}
+											<dt>{{value.title}}</dt>
+											<dd class="clearfix">
+												<ul>
+													{{each value.list as lc}}
+													<li>
+														<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+													</li>
+													{{/each}}
+												</ul>
+											</dd>
+											{{/each}}
+										</dl>
+									</script>
+								</div>
+
+								<div class="cate-right" id="tj3">
+									<script id="tui3" type="text/html">
+										{{each tuijian as value}}
+										<h5>{{value.title}}</h5>
+										<ul>
+											<li>
+												<a href={{value.link}}><img src={{value.src}} class="lazyload" alt="天佑德青稞酒" /> </a>
+											</li>
+										</ul>
+										{{/each}}
+									</script>
+								</div>
+							</div>
+						</div>
+
+						<div class="item" id="item4">
+							<span>								
+								<script id="nav4" type="text/html">
+									{{each titd as value}}
+									<h3><i></i><a href={{value.link}}>{{value.con}}</a></h3>
+									<p>
+										{{each value.list as lc}}
+											<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+										{{/each}}
+									</p>
+									{{/each}}
+								</script>
+							</span>
+
+							<div class="category-details">
+								<div class="subitem" id="sub4">
+									<script id="nav-list4" type="text/html">
+										<dl class="first" style="z-index: 99;">
+											{{each navlist as value }}
+											<dt>{{value.title}}</dt>
+											<dd class="clearfix">
+												<ul>
+													{{each value.list as lc}}
+													<li>
+														<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+													</li>
+													{{/each}}
+												</ul>
+											</dd>
+											{{/each}}
+										</dl>
+									</script>
+								</div>
+
+								<div class="cate-right" id="tj4">
+									<script id="tui4" type="text/html">
+										{{each tuijian as value}}
+										<h5>{{value.title}}</h5>
+										<ul>
+											<li>
+												<a href={{value.link}}><img src={{value.src}} class="lazyload" alt="天佑德青稞酒" /> </a>
+											</li>
+										</ul>
+										{{/each}}
+									</script>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="item" id="item5">
+							<span>								
+									<script id="nav5" type="text/html">
+										{{each tite as value}}
+										<h3><i></i><a href={{value.link}}>{{value.con}}</a></h3>
+										<p>
+											{{each value.list as lc}}
+												<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+											{{/each}}
+										</p>
+										{{/each}}
+									</script>
+								</span>
+
+							<div class="category-details">
+								<div class="subitem" id="sub5">
+									<script id="nav-list5" type="text/html">
+										<dl class="first" style="z-index: 99;">
+											{{each navlist as value }}
+											<dt>{{value.title}}</dt>
+											<dd class="clearfix">
+												<ul>
+													{{each value.list as lc}}
+													<li>
+														<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+													</li>
+													{{/each}}
+												</ul>
+											</dd>
+											{{/each}}
+										</dl>
+									</script>
+								</div>
+
+								<div class="cate-right" id="tj5">
+									<script id="tui5" type="text/html">
+										{{each tuijian as value}}
+										<h5>{{value.title}}</h5>
+										<ul>
+											<li>
+												<a href={{value.link}}><img src={{value.src}} class="lazyload" alt="天佑德青稞酒" /> </a>
+											</li>
+										</ul>
+										{{/each}}
+									</script>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="item" id="item6">
+							<span>
+							<script id="nav6" type="text/html">
+								{{each titf as value}}
+								<h3><i></i><a href={{value.link}}>{{value.con}}</a></h3>
+								<p>
+									{{each value.list as lc}}
+										<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+									{{/each}}
+								</p>
+								{{/each}}
+							</script>								
+							</span>
+
+							<div class="category-details">
+								<div class="subitem" id="sub6">
+									<script id="nav-list6" type="text/html">
+										<dl class="first" style="z-index: 99;">
+											{{each navlist as value }}
+											<dt>{{value.title}}</dt>
+											<dd class="clearfix">
+												<ul>
+													{{each value.list as lc}}
+													<li>
+														<a href={{lc.link}} target="_blank">{{lc.con}}</a>
+													</li>
+													{{/each}}
+												</ul>
+											</dd>
+											{{/each}}
+										</dl>
+									</script>
+								</div>
+
+								<div class="cate-right" id="tj6">
+									<script id="tui6" type="text/html">
+										{{each tuijian as value}}
+										<h5>{{value.title}}</h5>
+										<ul>
+											<li>
+												<a href={{value.link}}><img src={{value.src}} class="lazyload" alt="天佑德青稞酒" /> </a>
+											</li>
+										</ul>
+										{{/each}}
+									</script>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<ul class="nav-ul">
+					<li>
+						<a href="" style="color: red;">首页</a>
+					</li>
+					<li>
+						<a href="http://pro.zhongjiu.cn//20170921/baij.html" target="_blank">白酒专区</a>
+					</li>
+					<li>
+						<a href="http://pro.zhongjiu.cn//20170925/hongy.html" target="_blank">红洋酒专区</a>
+					</li>
+					<li>
+						<a href="http://pro.zhongjiu.cn/20160606/qkj.html" target="_blank">天佑德青稞酒</a>
+					</li>
+					<li>
+						<a href="http://pro.zhongjiu.cn/20160606/qkj.html" target="_blank">精品推荐</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="detail-wrap">
+			<div class="detail">
+				<div class="title">
+					<ul>
+						<li><a href="">全部&nbsp;&nbsp;&nbsp;&nbsp;>&nbsp;</a></li>
+						<li><a href="">白酒&nbsp;&nbsp;&nbsp;&nbsp;>&nbsp;</a></li>
+					</ul>
+				</div>
+				
+				<div class="left-img">
+					
+
+					<div class="midArea">
+						<div class="activeimg" >
+						<script id="ximg" type="text/html">
+							<img src={{src}} />	
+						</script>
+						</div>
+						<div class="zoom"></div>
+					</div>	
+					
+					<div class="bigArea">
+						<script id="bimg" type="text/html">
+							<img src={{src}}  class="bigimg" />							
+						</script>
+					</div>
+
+
+					<ul class="small-img">
+						<script id="lh" type="text/html">
+							<li class="on"><img src={{src}} /> </li>
+							<li><img src={{src1}} /> </li>
+							<li><img src={{src2}} /> </li>
+							<li><img src={{src3}} /> </li>
+						</script>
+					</ul>
+					
+				
+				</div>
+				
+				<div class="right-infor">
+					<div class="product-intro">
+						<script id="detailinfor" type="text/html">
+							<h3>{{title}}</h3>
+							<div class="price">
+								<span>价格</span>
+								<s>￥ {{pirce}}</s>
+							</div>
+						</script>
+					</div>
+					
+					<ul class="num">
+						<li>数量</li>
+						<li class="minus">-</li>
+						<li><input type="text" class="bnum" value="" /></li>
+						<li class="add">+</li>
+					</ul>
+					
+					<input type="button" name="btn" id="btn" value="加入购物车" />
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="right-side">
+			<div class="right-side-menu">
+				<ul class="menu-top">
+					<li>
+						<i class="user"><s></s></i>
+						<span>个人中心</span>
+						<b></b>
+					</li>
+
+					<li class="li-cart">
+						<a href="cart.html" target="_blank">
+						<i class="cart"><s></s></i>
+						<p>购物车</p>
+						<em class="emnumber">0</em>
+						</a>
+					</li>
+
+					<li>
+						<b></b>
+						<i class="asset"><s></s></i>
+						<span>资产中心</span>
+					</li>
+
+					<li>
+						<i class="at-goods"><s></s></i>
+						<span>关注商品</span>
+					</li>
+
+					<li>
+						<i class="history"><s></s></i>
+						<span>浏览历史</span>
+						<b></b>
+					</li>
+
+					<li>
+						<i class="customer"><em>客服</em></i>
+						<span>董杰</span>
+					</li>
+
+				</ul>
+
+				<ul class="menu-bot">
+					<li>
+						<i class="gotop"></i>
+						<span>返回顶部</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="ensure-wrap">
+				<div class="ensure">
+					<dl>
+						<dt class="zhengpin"></dt>
+						<dd>
+							<h3>正品保障</h3>
+							<p>厂家直接 正品防伪</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="lingjun"></dt>
+						<dd>
+							<h3>领军 o2o</h3>
+							<p>中国酒类 o2o第一家</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="tuihuo"></dt>
+						<dd>
+							<h3>无理由退货</h3>
+							<p>拆封无条件退货</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="peisong"></dt>
+						<dd>
+							<h3>闪电配送</h3>
+							<p>专业配送 安全送达</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="koubei"></dt>
+						<dd>
+							<h3>百万口碑</h3>
+							<p>400万用户的认可</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="ser"></dt>
+						<dd>
+							<h3>金牌服务</h3>
+							<p>7*12小时贴心服务</p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div id=""></div>
+
+			<div class="fservice-wrap">
+				<div class="fservice">
+					<dl class="linkothers">
+						<a href="http://www.zhongjiu.cn" target="_blank">
+							<img src="img/zj.png" alt="" />
+						</a>
+						<a href="http://www.zhongjiu.cn" target="_blank">
+							<img src="img/ls2.png" alt="" />
+						</a>
+						<a href="http://www.zhongjiu.cn" target="_blank">
+							<img src="img/yt2.png" alt="" />
+						</a>
+					</dl>
+
+					<dl>
+						<dt>购物指南</dt>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>配送说明</dt>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>支付方式</dt>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>售后服务</dt>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>服务保障</dt>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+						<dd>
+							<a href="/HelpDetail/34.htm">关于发票</a>
+						</dd>
+					</dl>
+
+					<dl class="web">
+						<dt>手机中酒</dt>
+						<dd>下载移动客户端</dd>
+					</dl>
+
+					<dl class="weixin">
+						<dt>中酒微信</dt>
+						<dd>
+							<a href="#" target="_blank">中酒官方微信</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="link">
+				<a href="http://www.zhongjiu.cn/Article/Details/25" target="_blank">关于中酒</a>
+				<a href="http://www.zhongjiu.cn/Article/Details/25" target="_blank">关于中酒</a>
+				<a href="http://www.zhongjiu.cn/Article/Details/25" target="_blank">关于中酒</a>
+				<a href="http://www.zhongjiu.cn/Article/Details/25" target="_blank">关于中酒</a>
+				<a href="http://www.zhongjiu.cn/Article/Details/25" target="_blank">关于中酒</a>
+				<a href="http://www.zhongjiu.cn/Article/Details/25" target="_blank">关于中酒</a>
+			</div>
+
+			<div class="copyright">
+				<p>Copyright © 2016 中酒网(www.zhongjiu.cn) 版权所有 京ICP备12022216号-2 | 京公网安备 11010502026701 | 购买前请确认达到法定饮酒年龄！中酒网不销售任何含酒精产品给18岁以下人士！</p>
+				<p>公司名称：中酒时代酒业（北京）有限公司&nbsp;公司地址：北京市朝阳区高碑店乡半壁店村惠河南街1111号国投尚科大厦2层E202单元办公室&nbsp;联系人：刘铮&nbsp;联系方式：400-798-9999&nbsp;社会信用代码证：911101055938071245&nbsp;食品经营许可证</p>
+				<div class="beian">
+					<a href="http://www.zhongjiu.cn/images/icp.jpg?v1" target="_blank">
+						<img src="img/authentication_01.png" alt="" />
+					</a>
+					<a href="http://www.zhongjiu.cn/images/icp.jpg?v1" target="_blank">
+						<img src="img/authentication_01.png" alt="" />
+					</a>
+					<a href="http://www.zhongjiu.cn/images/icp.jpg?v1" target="_blank">
+						<img src="img/authentication_01.png" alt="" />
+					</a>
+					<a href="http://www.zhongjiu.cn/images/icp.jpg?v1" target="_blank">
+						<img src="img/authentication_01.png" alt="" />
+					</a>
+					<a href="http://www.zhongjiu.cn/images/icp.jpg?v1" target="_blank">
+						<img src="img/authentication_01.png" alt="" />
+					</a>
+					<a href="http://www.zhongjiu.cn/images/icp.jpg?v1" target="_blank">
+						<img src="img/authentication_01.png" alt="" />
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script src="js/DoJ.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/detail.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cartative.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

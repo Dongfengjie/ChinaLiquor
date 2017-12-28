@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页面</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Registered.css"/>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="welcomg">
+			<div class="wlc">
+				<span class="favorite">
+					<i></i>
+					<a >收藏商城</a>
+				</span>
+				
+				<ul class="hello">
+					<li class="loginbar">您好！欢迎来到商城！<a href="login.html">[登录]</a>&nbsp;<a>[免费注册]</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="top-wrap">
+			<div class="top">
+				<a href="ChinaLiquor.html">
+					<img src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/logo.png" alt="Himall" />
+				</a>
+				<b>欢迎注册</b>
+			</div>
+		</div>
+		
+		<div id="content">
+			<div class="title">
+				<span>我已经注册，现在就 &nbsp;<a href="login.html">登录</a></span>
+			</div>
+			
+			<div class="con">
+				<form action="PHP/Registered.php" method="post" class="con-form">
+					<!--手机-->
+					<div class="item">
+						<label class="lab"><b class="warn">*</b>手机号码:&nbsp;</label>
+						<div class="item-ifo">
+							<input type="text" name="phone" id="phone" />
+							<i class="i-name"></i>							
+						</div>
+						<label class="tishi">请输入手机号码</label>
+						
+					</div>
+					<!--验证码-->
+					<div class="item">
+						<label class="lab"><b class="warn">*</b>图形验证:&nbsp;</label>
+						<div class="item-ifo">
+							<input type="text" name="check" class="check" />
+							<span class="vcod"></span>
+						</div>
+						<label class="tishi">请输入验证码</label>
+					</div>
+					<!--密码-->
+					<div class="item">
+						<label class="lab"><b class="warn">*</b>请设置密码:&nbsp;</label>
+						<div class="item-ifo">
+							<input type="password" name="" id="psw"/>
+							<i class="i-pass"></i>
+						</div>
+						<label class="tishi">6-20位字符，可使用字母、数字或符号的组合,不建议使用纯字母、纯数字、纯符号</label>
+					</div>
+					<!--再次密码-->
+					<div class="item">
+						<label class="lab"><b class="warn">*</b>请确认密码:&nbsp;</label>
+						<div class="item-ifo">
+							<input type="password" name="" id="pwd-agin" />
+							<i class="i-pass"></i>
+						</div>
+						<label class="tishi">请再次输入密码</label>
+					</div>
+					<!--手机验证码-->
+					<div class="item">
+						<label class="lab"><b class="warn">*</b>手机验证码:&nbsp;</label>
+						<div class="item-ifo">
+							<input type="text" name="" class="check" />
+							<span class="phonebtn">获取验证码</span>
+						</div>
+						<label class="tishi">请输入验证码</label>
+					</div>
+					<!---->
+					<div class="agree">
+						<input type="checkbox" class="checkbox"  checked="checked"/>
+						我已阅读并同意《<a href="http://www.zhongjiu.cn/Register/RegisterAgreement" target="_blank">用户注册协议</a>》
+					</div>
+					
+					<input type="button" class="sub" value="立即注册"/>
+				</form>
+			</div>
+		</div>
+		
+		<div id="top-wrap">
+			<div class="footer">
+				<p>Copyright © 2017   中酒网 版权所有</p>
+			</div>
+		</div>
+		
+		<script src="js/DoJ.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Registered.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

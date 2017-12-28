@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="top-wrap">
+			<div class="top">
+				<a href="ChinaLiquor.html">
+					<img src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/logo.png" alt="Himall" />
+				</a>
+				
+				<b></b>
+			</div>
+		</div>
+		
+		<div id="center-wrap">
+			<div class="center">				
+				<div class="cen-left">
+					<img src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/Site/pcloginpic.png" />
+				</div>
+				
+				<div class="con-right">
+					<ul class="tab-top">
+						<li class="active"><span class="rb">扫码登录</span></li>
+						<li><span>账户登录</span></li>
+					</ul>
+					
+					<div class="tab-cen">
+						<section>
+							<div class="saoma">
+								<p><img src="img/GetQR.gif" /></p>
+								<span>打开<a href="" target="_blank">中酒网App</a></span>
+								<span class="fr">扫描二维码</span>
+							</div>
+							<span><img src="img/sao_2.png" alt="" /></span>
+						</section>
+						
+						<section class="hidden">
+							<div class="form">
+								<p class="inform"><i></i>公共场所不建议自动登录，以防账号丢失</p>
+								<form action="" method="post" class="biaodan">
+									<div class="name">
+										<label class="name-img">
+										<input type="text" name="username"   placeholder="用户名" />
+										</label>
+									</div>
+									
+									<div class="pass">
+										<label class="psw-img">
+										<input type="password" name="psw"  placeholder="密码" />
+										</label>
+									</div>
+									
+									<div class="auto">
+										<label  class="mar"><input type="checkbox"  class="marinpt" />自动登录</label>
+										
+										<p class="fog">
+											<a href="http://www.zhongjiu.cn/findpassword" target="_blank">忘记密码</a>
+										</p>
+									</div>
+									
+									
+									<input type="button" class="sub" value="登录"/>
+								</form>
+							</div>
+						</section>
+					</div>
+					
+					
+					<div class="tab-foot">
+						<ul>
+							<li><a href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=1106027103&redirect_uri=http%3a%2f%2fwww.zhongjiu.cn%2fLogin%2fOauthCallBack%3foauthId%3dHimall.Plugin.OAuth.QQ&scope=get_user_info&state=Himall.Plugin.OAuth.QQ" target="_blank"><b class="qq-img"></b><em>QQ</em> <span class="line">|</span></a></li>
+							<li><a href="https://api.weibo.com/oauth2/authorize?client_id=93470565&response_type=code&redirect_uri=http%3a%2f%2fwww.zhongjiu.cn%2fLogin%2fOauthCallBack%3foauthId%3dHimall.Plugin.OAuth.Weibo" target="_blank"><b class="web-img"></b><em>微博</em> <span class="line">|</span></a></li>
+							<li><a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx45a6feedd1adfcfe&redirect_uri=http%3a%2f%2fwww.zhongjiu.cn%2fLogin%2fOauthCallBack%3foauthId%3dHimall.Plugin.OAuth.WeiXin&response_type=code&scope=snsapi_login&state=hishop#wechat_redirect" target="_blank"><b class="weixin-img"></b><em>微信</em><span class="line">|</span></a></li>
+							<li><a href="Registered.html"  style="color: #b61d1d;"><em>立即注册</em></a></li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="top-wrap">
+			<div class="footer">
+				<p>Copyright © 2017   中酒网 版权所有</p>
+			</div>
+		</div>
+		<script src="js/DoJ.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

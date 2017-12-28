@@ -1,0 +1,122 @@
+.mc {
+  display: none; }
+
+.categorys:hover .mc {
+  display: block; }
+
+#content-wrap {
+  width: 100%; }
+  #content-wrap .title {
+    width: 1200px;
+    margin: 15px auto; }
+    #content-wrap .title ul {
+      overflow: hidden;
+      border-bottom: 1px solid #CECECE; }
+      #content-wrap .title ul li {
+        float: left;
+        margin-bottom: 10px;
+        font-size: 14px; }
+        #content-wrap .title ul li a {
+          font-weight: bold;
+          color: #666666; }
+  #content-wrap .content {
+    height: auto;
+    overflow: hidden;
+    width: 1200px;
+    margin: 50px auto; }
+    #content-wrap .content .left {
+      width: 190px;
+      float: left;
+      margin-left: 10px; }
+      #content-wrap .content .left h3 {
+        font-weight: 900;
+        font-size: 16px;
+        color: #000000; }
+      #content-wrap .content .left p {
+        margin-left: 35px;
+        margin-top: 10px;
+        font-size: 14px; }
+    #content-wrap .content .right {
+      margin-bottom: 70px;
+      float: right;
+      width: 1000px; }
+      #content-wrap .content .right ul {
+        overflow: visible;
+        position: relative;
+        z-index: 5;
+        box-sizing: border-box; }
+        #content-wrap .content .right ul li {
+          z-index: 1;
+          float: left;
+          height: 330px;
+          margin-left: 13px;
+          margin-bottom: 10px;
+          position: relative;
+          box-sizing: border-box; }
+          #content-wrap .content .right ul li .lh-wrap {
+            width: 220px;
+            padding: 7px;
+            height: 312px;
+            border: 1px dotted #DDDDDD; }
+            #content-wrap .content .right ul li .lh-wrap .p-img {
+              position: relative;
+              width: 218px;
+              height: 218px;
+              text-align: center; }
+              #content-wrap .content .right ul li .lh-wrap .p-img img {
+                width: 218px;
+                height: 218px;
+                border: none;
+                display: block; }
+            #content-wrap .content .right ul li .lh-wrap .p-price {
+              font-size: 18px;
+              margin-bottom: 10px;
+              color: red;
+              font-weight: bold; }
+            #content-wrap .content .right ul li .lh-wrap .p-name {
+              font-size: 13px;
+              color: #333;
+              height: 20px;
+              line-height: 20px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              margin-left: 6px; }
+              #content-wrap .content .right ul li .lh-wrap .p-name a {
+                color: #333333; }
+            #content-wrap .content .right ul li .lh-wrap .shop-moblie {
+              height: 20px;
+              line-height: 20px;
+              margin-top: 10px;
+              margin-left: 6px; }
+              #content-wrap .content .right ul li .lh-wrap .shop-moblie a {
+                font-size: 12px;
+                color: #6b6c6e; }
+          #content-wrap .content .right ul li .hid {
+            display: none;
+            height: 50px;
+            padding-top: 5px;
+            padding-bottom: 15px;
+            padding-left: 7px;
+            width: 229px;
+            position: absolute;
+            border: 1px solid #c4354c;
+            background-color: #fff;
+            margin-left: -1px;
+            border-top: none; }
+            #content-wrap .content .right ul li .hid a {
+              float: left; }
+              #content-wrap .content .right ul li .hid a img {
+                width: 47px;
+                height: 45px; }
+        #content-wrap .content .right ul li:hover {
+          border: 1px solid #c4354c;
+          z-index: 999; }
+          #content-wrap .content .right ul li:hover .hid {
+            display: block; }
+          #content-wrap .content .right ul li:hover .lh-wrap {
+            border-bottom: none; }
+          #content-wrap .content .right ul li:hover .shop-moblie a {
+            text-decoration: underline; }
+
+/*# sourceMappingURL=list.css.map */

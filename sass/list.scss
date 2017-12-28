@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+.mc{display: none;}
+
+.categorys:hover{
+    .mc{display: block;}
+}
+
+#content-wrap{
+    width: 100%;
+    .title{
+        width: 1200px;
+        margin: 15px auto;
+        ul{
+            overflow: hidden; 
+            border-bottom: 1px solid #CECECE;
+            li{float: left;
+            margin-bottom: 10px;   
+                font-size: 14px;
+                a{font-weight: bold;
+                    color: #666666;
+                }
+               }
+        }
+    }
+    .content{
+        height: auto;
+        overflow: hidden;
+        width: 1200px;
+        margin: 50px auto;
+       .left{
+           width: 190px;
+           float: left;
+           margin-left: 10px;
+           h3{
+               font-weight: 900;
+               font-size: 16px;
+               color: #000000;
+           }
+           p{
+               margin-left: 35px;
+               margin-top: 10px;
+               font-size: 14px;
+           }
+       }
+       .right{
+           margin-bottom: 70px;
+           float: right;
+           width: 1000px;
+           ul{overflow: visible;
+                position: relative;
+                z-index: 5;
+                 box-sizing: border-box;
+               li{z-index: 1;
+                   float: left;
+                   height: 330px;
+                   margin-left: 13px;
+                   margin-bottom: 10px;
+                   position: relative;
+                   box-sizing: border-box;
+                   
+                   .lh-wrap{
+                       width: 220px;
+                       padding: 7px;
+                       height: 312px;
+                       border: 1px dotted #DDDDDD;
+                       .p-img{
+                           position: relative;
+                           width: 218px;
+                           height: 218px;
+                           text-align: center;
+                           img{
+                               width: 218px;
+                               height: 218px;
+                               border: none;
+                               display: block;
+                           }
+                       }
+                       .p-price{
+                           font-size: 18px;
+                           margin-bottom: 10px;
+                           color: red;
+                           font-weight: bold;
+                       }
+                       .p-name{
+                           font-size: 13px;
+                            color: #333;
+                            height: 20px;
+                            line-height: 20px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            margin-left: 6px;
+                            a{color: #333333;}
+                       }
+                       .shop-moblie{
+                           height: 20px;
+                           line-height:20px;
+                           margin-top: 10px;
+                           margin-left: 6px;
+                           a{
+                               font-size: 12px;
+                               color: #6b6c6e;
+                           }
+                           
+                       }
+                   }
+                   .hid{display: none;
+                        height: 50px;
+                        padding-top: 5px;
+                        padding-bottom: 15px;
+                        padding-left: 7px;
+                        width: 229px;
+                        position: absolute;
+                        border: 1px solid #c4354c;
+                        background-color: #fff;
+                        margin-left: -1px;
+                        border-top: none;
+                        a{
+                            float: left;
+                            img{
+                                width: 47px;
+                                height: 45px;
+                            }
+                        }
+                   }
+               }
+               li:hover{ border: 1px solid #c4354c; 
+                        z-index: 999;
+                    .hid{display: block;}
+                    .lh-wrap{border-bottom: none;}
+                   .shop-moblie{a{text-decoration: underline;}}
+                        }
+           }
+       }
+    }
+}

@@ -1,0 +1,87 @@
+{
+	"navlist": [
+		{
+			"title": "品牌",
+			"list": [
+				{
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "茅台"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "五粮液"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "天佑德"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "拉菲"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "张裕"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "芝华士"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "马爹利"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "五粮液"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "天佑德"
+				}
+			]
+		}, {
+			"title": "香型",
+			"list": [
+				{
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "酱香型"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "浓香型"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "绵柔型"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "凤香型"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "董香型"
+				}
+			]
+		}, {
+			"title": "产地",
+			"list": [
+				{
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "贵州"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "山西"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "四川"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "河南"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "江西"
+				}, {
+					"link": "http://www.zhongjiu.cn/list/2-323-0-1-1-1.htm",
+					"con": "东北"
+				}
+			]
+		}
+	],
+	"tuijian": [
+		{
+			"title": "推荐品牌",
+			"link": "http://pro.zhongjiu.cn/20160606/qkj.html",
+			"src": "http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201703091338113466590.jpg"
+		}
+	]
+}

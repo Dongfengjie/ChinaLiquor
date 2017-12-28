@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车结算</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="top-wrap">
+			<div class="top">
+				<span class="top-s">您好，欢迎来到
+					<em>中酒网！</em>
+					<a href="ChinaLiquor.html">去首页</a>
+				</span>
+
+				<ul class="login-regin">
+					<li>
+						<a href="login.html">请登录</a>
+					</li>
+					<li>
+						<a href="Registered.html">免费注册</a>
+					</li>
+				</ul>
+
+				<ul class="quick">
+					<li class="sitemap-dropdown">
+						<a href="">我的中酒网<b></b></a>
+						<ol>
+							<li>
+								<a href="">已买到的商品</a>
+							</li>
+							<li>
+								<a href="">我关注的商品</a>
+							</li>
+							<li>
+								<a href="">已买到的店铺</a>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<a href="cart.html" target="_blank">购物车<em class="emnumber">0</em>件</a>
+					</li>
+
+					<li class="wx-dropdown">
+						<a href="javascript:void(0)">微信端</a>
+						<img src="img/qrCode.png" />
+					</li>
+
+					<li class="app-dropdown">
+						<a href="">APP</a>
+						<div class="dropdown-menu">
+							<img src="img/mob.png" />
+							<h3>扫描二维码</h3>
+							<p>下载手机客户端</p>
+						</div>
+					</li>
+
+					<li class="sitemap-dropdown">
+						<a href="">卖家中心<b></b></a>
+						<ol>
+							<li>
+								<a href="">商品入住</a>
+							</li>
+							<li>
+								<a href="">已卖出的商品</a>
+							</li>
+							<li>
+								<a href="">管理店铺</a>
+							</li>
+						</ol>
+					</li>
+
+					<li class="daohang-dropdown">
+						<a href="">网站导航<b></b></a>
+						<div class="dropdown-daoh">
+							<ul>
+								<script id="daoh" type="text/html">
+									{{each smallnav as item}}
+									<li>
+										<h3>{{item.title}}</h3>
+										<div class="dropdown-daoh-listcont">
+											{{each item.list as value}}
+											<a href={{value.link}} target="_blank">{{value.con}}</a>
+											{{/each}}
+										</div>
+									</li>
+									{{/each}}
+								</script>
+							</ul>
+
+						</div>
+					</li>
+
+					<li>
+						<a href="">订购热线：400-798-9999</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		
+		<div id="logo-wrap">
+			<div class="logo">
+				<a href="ChinaLiquor.html"><img src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/logo.png" alt="Himall" /></a>				
+			</div>
+			
+			<div class="content">
+				<h2>我的购物车</h2>
+				
+				<div class="money">
+					<div class="top">
+						<div class="cbx">
+							<input type="checkbox"  class="ipt"  /> <label>全选</label>						
+						</div>					
+						<div class="name">商品</div>
+						<div class="price">商城价</div>
+						<div class="number">数量</div>
+						<div class="action">操作</div>
+					</div>
+					
+					<div class="center">
+						<script id="cartcenter" type="text/html">
+								{{each data as value}}
+							<div class="delateinfo" data="{{value.id}}">
+								<div class="name">
+									<img src={{value.src}} alt="" />
+									<span>{{value.title}}</span>
+								</div>
+								
+								<div class="price">￥{{value.pirce}}元&nbsp;&nbsp;(单价)</div>
+								
+								<div class="number">
+									<ul class="cnum">
+										<li class="cminus">-</li>
+										<li><input type="text" class="bnum" value="" /></li>
+										<li class="cadd">+</li>
+									</ul>
+								</div>
+								
+								<div class="action">删除</div>
+							</div>	
+								{{/each}}
+						</script>						
+					</div>
+					
+				<div class="foot">
+					<div class="totalprice">总价：<span></span>元</div>
+					<input type="button"  id="cbtn" value="去结算" />
+				</div>
+					
+			</div>
+				
+		</div>
+	</div>
+		
+		<script src="js/DoJ.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cartative.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

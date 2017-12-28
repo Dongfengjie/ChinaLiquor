@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+.mc{display: none;}
+
+.categorys:hover{
+    .mc{display: block;}
+}
+
+#detail-wrap{
+    width: 100%;
+    background: #F5F5F5;
+    .detail{
+        width: 1200px;
+        margin: 0 auto;
+        height: 500px;
+        background: #FFFFFF;
+        .title{
+            height: 22px;
+            line-height: 22px;
+            overflow: hidden;
+            background: #fff;
+            font-size: 14px;
+            padding: 12px 0 12px 20px;
+            ul{
+                li{
+                    float: left;
+                    margin-right: 15px;
+                    a{
+                        color: #333333;
+                    }
+                    a:hover{color:red;}
+                }
+            }
+        }
+        
+        .left-img{
+            float: left;
+            width: 350px;
+            height: 350px;
+            border: 1px solid #CCCCCC;
+            position: relative;
+            .midArea{
+                                  
+                cursor: move; 
+               
+                img{display: block;
+                    border: none;
+                    width: 350px;
+                    height: 350px;
+                }
+                .zoom{
+                    display: none;
+                    width: 175px;
+                    height: 175px;
+                    background: gray;
+                    opacity: 0.4;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+            
+            .bigArea{
+                display: none;
+                border: 1px solid #DDDDDD;
+                width: 350px;
+                height: 350px;
+                position: absolute;
+                left: 360px;
+                top: 0;
+                overflow: hidden;
+                .bigimg{
+                    display: block;
+                    width: 700px;
+                    height:700px;
+                    border: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .small-img{
+                overflow: hidden;
+                margin-top: 15px;
+                li{float: left;
+                    height: 50px;
+                    width: 50px;
+                    margin-left: 20px;
+                    cursor: pointer;
+                    img{
+                        display: block;
+                        width: 50px;
+                        height: 50px;
+                        border: none;
+                        
+                    }
+                }
+                .on{
+                    border: 2px solid red;
+                }
+            }
+        }
+        
+        .right-infor{
+            float: left;
+            margin-left: 30px;
+            width: 500px;
+            height: 350px;
+            h3{
+                font-weight: bold;
+                font-size: 18px;
+                color: #000000;
+            }
+            .price{
+                margin: 10px 0;
+                background: url(../img/price-info_bg.jpg) no-repeat;
+                width: 490px;
+                height: 56px;
+                overflow: hidden;
+                span{
+                    display: block;
+                    padding: 18px;
+                    font-size: 18px;
+                    float: left;
+                }
+                s{  color: red;
+                    float: left;
+                    font-size: 36px;
+                    text-decoration: none;
+                }
+                
+            }
+            .num{
+                margin-top:30px;
+                height: 50px;
+                font-size: 18px;
+                li{
+                    float: left;
+                    width: 50px;
+                    height: 50px;
+                    margin-left: 10px;
+                    border: 1px solid #EDEDED;
+                    text-align: center;
+                    line-height: 50px;
+                   
+                    input{
+                        border: none;
+                        width: 50px;
+                        height: 46px;
+                        text-align: center;
+                    }
+                }
+                li:first-child{border: none;}
+                .add,.minus{cursor: pointer;  font-size: 40px;}
+                .add:hover,.minus:hover{color: red;}
+            }
+            #btn{
+                margin-top: 80px;
+                margin-left: -160px;
+                border: none;
+                height: 50px;
+                width: 150px;
+                line-height: 50px;
+                text-align: center;
+                color: #ff4d50;
+                border: 2px solid #ff4d50;
+                background: #FFFFFF;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+}
